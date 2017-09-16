@@ -1,0 +1,173 @@
+			*{
+				font-family: helvetica, tahoma, sans-serief;
+			}
+			body{
+				background-color:rgb(0,27,39);
+			}
+			.centralizado{
+				width:900px;
+				margin:auto;	
+			}	
+			header{
+				margin-bottom:10px;
+			}
+			header h1{
+				display:inline;
+				margin:10px;
+				color:#fff;
+				letter-spacing:-2px;
+			}
+			span{
+				color:rgb(0,152,228)
+			}
+			header nav{
+				float:right;
+				color:#fff;
+			}
+			header nav ul{
+				padding-left:0;
+			}
+			header nav li{
+				list-style:none;
+				display:inline;
+				margin:0 14px;
+			}
+			header nav li:first-child{
+				color:rgb(25,104,139);
+			}
+			main{
+				background-color:#fff;
+				padding:13px;
+				box-sizing:border-box;
+			}
+			main:nth-last-of-type(3){
+				padding-bottom:0;
+			}
+			section{
+				margin-bottom:15px;
+			}
+			section img{
+				width:874px;
+				height:350px;
+				position:relative;
+			}
+			.pai{
+				position:relative;
+			}
+			.filho{
+				position:absolute;
+				top:60px;
+				left:50px;
+				color:#fff;
+				width:300px;
+			}
+			.filho h1{
+				display:inline;
+				font-size:3.5em;
+			}
+			.filho p{
+				margin-top:10px;
+			}
+			.portifolio{
+				width:256px;
+				float:left;
+				margin-right:13px;
+				padding:13px;
+				height:200px;
+				margin-bottom:30px
+				position:relative;
+			}
+			.portifolio h2{
+				margin-top:0;
+			}
+			.portifolio p{
+				font-size:0.7em;
+			}
+			.portifolio:last-child{
+				margin-right:0;
+			}
+			.portifolio span{
+				font-size:0.7em;
+				color:rgb(0,27,39);
+			}
+			.button{
+				width:130px;
+				padding:10px 10px;
+				background: linear-gradient(to top, rgb(0,145,216) , rgb(15,175,234));
+				border-radius:5px;
+				position:absolute;
+				bottom:10px;
+			}
+			.fundo-azul{
+				color:#fff;
+				background-color:rgb(0,98,153);
+				position:relative;
+			}
+			.conteudo{
+				width:530px;
+				float:left;
+				margin-right:50px;
+				margin-bottom:20px;
+				position:relative;
+			}
+			.conteudo img{
+				width:278px;
+				height:200px;
+				float:left;
+				margin-right:13px;
+			}
+			.conteudo p{
+				font-size:0.7em;
+			}
+			.conteudo a{
+				position: absolute;
+				bottom:0;
+			}
+			.conteudo a:link, a:visited {
+				text-decoration: none;
+				color:rgb(25,104,139);
+			}
+			.conteudo a:hover {
+				text-decoration: none; 
+				color: #ccc;
+			}
+			.conteudo a:active {
+				text-decoration: none;
+			}
+			blockquote{
+				color:rgb(0,27,39);
+				background-color: rgb(204,236,255);
+				margin-left:0;
+				padding:20px;
+				font-style:italic;
+				width:235px;
+				height:135px;
+				font-size:0.9em;
+				
+			}
+			.rodape{
+				margin:0;				
+			}
+			section nav{
+				float:right;
+				color:rgb(25,104,139);
+				padding:15px 232px;
+				background-color: rgb(204,236,255);
+				clear:both;
+				margin-bottom:10px;
+				font-size:0.8em;
+			}
+			section nav ul{
+				padding:0;
+				margin:0;
+			}
+			section nav li{
+				list-style:none;
+				display:inline;
+				margin:0 10px;
+			}
+			.foot p{
+				margin-top:0;
+				color:#fff;
+				font-size:0.8em;
+			}
