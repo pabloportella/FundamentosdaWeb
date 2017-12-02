@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="./css/estilo.css"/>
+		<script src="./js/jquery.min.js"></script>
+		<script>
+			$(function(){
+				
+				$("#ryu").mouseover(function(){
+					$(this).attr("src","./img/ryu_mexendo.gif");
+				});
+				
+				$("#ryu").mouseleave(function(){
+					$(this).attr("src","./img/ryu.png");
+				});
+				
+				$("#ryu").click(function(){
+					$(this).attr("src","./img/ryu_hadouken.png");
+				var $bolaFogo = $("<img/>");
+					$bolaFogo.attr("src",'./img/ryu_bola_fogo.gif');
+					$bolaFogo.attr("id","magia");
+					$("#bolaFogo").append($bolaFogo);
+				var $audioHadouken = $("<audio/>");
+					$audioHadouken.attr("src", './audio/hadouken.mp3');
+					$audioHadouken.attr("autoplay","autoplay");
+					$("#bolaFogo").append($audioHadouken);
+					$("#magia").animate({
+						right:'500px',
+						opacity:'0.5'
+					},500,function(){
+						$("#magia").remove();
+						
+					});
+					
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="ryu">
+			<img id="ryu" src="./img/ryu.png"/>
+			<div id="bolaFogo"></div>
+		</div>
+	</body>
+</html>

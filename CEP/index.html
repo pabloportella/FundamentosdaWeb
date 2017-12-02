@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8"/>
+		<style>
+			*{
+			   font-family:Verdana, Tahoma, saens-serif;
+				
+			}
+			.centralizado{
+				margin:0 auto;
+				width:800px;
+			}
+			body{
+				margin:0;
+			}
+			.endereco{
+				width:600px;
+				height:800px;
+				margin-top:100px;
+				background-color:#ccc;
+				color:#fff;
+				border-radius:10px;
+				box-shadow:8px 8px 10px #888;
+			}
+			h3,p{
+				display:inline;
+			}
+		</style>
+		<script src="./js/jquery.min.js"></script>
+		<script>
+			$(function(){
+				$("#submit").click(function(){
+					var servico = "http://api.postmon.com.br/v1/cep/"+$("#cep").val();
+					$.get(servico).done(function(data){
+						console.log(data);
+						
+						$(".endereco").append($("<h1/>").text("Endereço:"));
+						$(".endereco").append($("<h3/>").text("Logradouro:")).append($("<p/>").text(data.logradouro));
+						$(".endereco").append($("<h3/>").text("Bairro:")).append($("<p/>").text(data.bairro));
+						$(".endereco").append($("<h3/>").text("Cidade:")).append($("<p/>").text(data.cidade));
+						$(".endereco").append($("<h3/>").text("Estado:")).append($("<p/>").text(data.estado));
+						$(".endereco").append($("<h3/>").text("Cep:")).append($("<p/>").text(data.cep));
+						$(".endereco").append($("<div/>").addClass("infoCidade"));
+						$(".infoCidade").append($("<h2/>").text("Informações da cidade: "));
+						$(".infoCidade").append($("<h3/>").text("Area km²:")).append($("<p/>").text(data.cidade_info.area_km2));
+						$(".infoCidade").append($("<h3/>").text("Código IBGE:")).append($("<p/>").text(data.cidade_info.codigo_ibge));
+						$(".endereco").append($("<div/>").addClass("infoEstado"));
+						$(".infoEstado").append($("<h2/>").text("Informações do estado: "));
+						$(".infoEstado").append($("<h3/>").text("Area km²:")).append($("<p/>").text(data.estado_info.area_km2));
+						$(".infoEstado").append($("<h3/>").text("Código IBGE:")).append($("<p/>").text(data.estado_info.codigo_ibge));
+						$(".infoEstado").append($("<h3/>").text("Nome:")).append($("<p/>").text(data.estado_info.nome));
+						
+					});	
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<main class="centralizado">
+			<div class="endereco">
+				<input type="text" id="cep"/>
+				<input type="button" id="submit" value="Buscar Cep"/>
+			</div>
+		</main>
+	</body>
+</html>

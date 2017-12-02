@@ -1,0 +1,12 @@
+.ryu{
+	position:relative;
+}
+#bolaFogo{
+	position:absolute;
+	left:170px;
+	top:60px;
+	width:1000px;
+}
+#magia{
+	position:absolute;
+}

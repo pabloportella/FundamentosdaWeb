@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8"/>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="./css/plugin.css">
+		<script src="./js/jquery.min.js"></script>
+		<script src="./js/plugin.js"></script>
+		<script>
+			$(function() {
+				var dados = {eventos:[{evento:"P3 - Fundamentos Web",duracao:"120",inicio:"8:30",tipo:"Prova"}, {evento:"Reunião Prefeitura",duracao:"180",inicio:"12:10",tipo:"outra-atividade"},{evento:"P3 - Programação OO",duracao:"240",inicio:"16:20",tipo:"Prova"}],horaInicio:"8:00",horaFim:"22:00"};
+				$(".calendar").plugin(dados);
+			});
+		</script>
+	</head>
+	<body>
+		<div class="calendar">
+			
+		</div>
+	</body>
+</html>
